@@ -4,7 +4,6 @@ import "./../styles/App.css";
 function App() {
   const handleClick = () => {
     let element = document.getElementById("para");
-    console.log("click");
     element.innerText =
       "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy";
   };
