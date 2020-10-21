@@ -2,15 +2,22 @@ import React from "react";
 import "./../styles/App.css";
 
 function App() {
+  const [display, setDisplay] = React.useState(false);
   const handleClick = () => {
-    let element = document.getElementById("para");
-    element.innerText =
-      "Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy";
+    setDisplay(true);
   };
+
   return (
     <div id="main">
       <button id="click" onClick={handleClick}></button>
-      <p id="para"></p>
+      {display ? (
+        <p id="para">
+          Hello, I've learnt to use the full-stack evaluation tool. This makes
+          me so happy
+        </p>
+      ) : (
+        <p id="para"></p>
+      )}
     </div>
   );
 }
